@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int ret = 0;
+	int ch = 0;
+	char password[20] = { 0 };
+	printf("请输入密码:>");//输入数字后按了回车多了字符\n
+	scanf("%s", password);
+	while ((ch = getchar()) != '\n')
+	{
+		;
+	}//将\n取出，清空输入缓冲区
+	printf("请确认(Y/N):>");
+	ret = getchar();
+	if (ret == 'Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("放弃确认\n");
+	}
+	return 0;
+}
